@@ -1,0 +1,2 @@
+<!--pages/wxa/wxa.wxml-->
+<button type="primary" bindtap="tapToB">选择城市：{{city}}</button>

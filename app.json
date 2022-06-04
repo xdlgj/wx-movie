@@ -1,0 +1,43 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/cinema/cinema",
+    "pages/me/me",
+    "pages/testing/wxa/wxa",
+    "pages/testing/wxb/wxb",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#1296db",
+    "navigationBarTitleText": "林婧影院",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar":{
+    "backgroundColor": "#ffffff",
+    "color": "#bfbfbf",
+    "selectedColor": "#1296db",
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/index/index",
+        "iconPath": "images/index.png",
+        "selectedIconPath": "images/index-sel.png"
+      },
+      {
+        "text": "影院",
+        "pagePath": "pages/cinema/cinema",
+        "iconPath": "images/cinema.png",
+        "selectedIconPath": "images/cinema-sel.png"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/me/me",
+        "iconPath": "images/me.png",
+        "selectedIconPath": "images/me-sel.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

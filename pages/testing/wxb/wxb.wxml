@@ -1,0 +1,6 @@
+<!--pages/wxb/wxb.wxml-->
+<text bindtap="selectCity" data-city="北京">北京</text>
+<text bindtap="selectCity" data-city="上海">上海</text>
+<text bindtap="selectCity" data-city="成都">成都</text>
+<text bindtap="selectCity" data-city="郑州">郑州</text>
+<text bindtap="selectCity" data-city="深圳">深圳</text>
