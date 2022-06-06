@@ -1,19 +1,14 @@
 // app.js
-App({
-  onLaunch() {
-    // 展示本地存储能力
-    const logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
 
-    // 登录
-    wx.login({
-      success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
-      }
-    })
+App({
+  /**生命周期回调——监听小程序初始化。 */
+  onLaunch() {
+    // 初始化腾讯位置服务SDK
+    const QQMapWX = require('/libs/qqmap-wx-jssdk.min.js');
+    const qqmapsdk = new QQMapWX({key: "H5FBZ-4VC6W-P7SRE-RSYEF-VJ5KZ-B3B3D"});
+    this.globalData.qqmapsdk = qqmapsdk;
   },
   globalData: {
-    userInfo: null
+    qqmapsdk: null,
   }
 })

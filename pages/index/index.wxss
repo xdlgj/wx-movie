@@ -1,19 +1,81 @@
 /**index.wxss**/
-.userinfo {
+.top-nav{
+  height: 44px;
+  width: 100%;
+  border-bottom: 1px solid #bfbfbf;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  color: #aaa;
+  justify-content: space-between;
 }
-
-.userinfo-avatar {
-  overflow: hidden;
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.city-entry{
+  display: flex;
+  align-items: center;
 }
-
-.usermotto {
-  margin-top: 200px;
+.triangle{
+  width: 0px;
+  height: 0px;
+  border: 6px solid;
+  margin-top: 10px;
+  border-top-color: #bfbfbf;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+.search-icon image{
+  width: 17px;
+  height: 17px;
+  margin-right: 10px;
+}
+text{
+  font-size: 17px;
+  color: #bfbfbf;
+  padding: 10px;
+}
+.text-selected{
+  color: #1296db;
+  font-size: 18px;
+  border-bottom: 1px solid#1296db;
+}
+.movie-item {
+  display: flex;
+  margin: 10px;
+  padding-bottom: 5px;
+  border-bottom: 0.5px solid #bfbfbf;
+}
+.movie-item image{
+  width: 109px;
+  height: 150px;
+}
+.movie-info {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.movie-info text {
+  font-size: 15px;
+}
+.movie-top{
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+}
+.movie-title{
+  font-size: 20px !important;
+  color: #000000;
+}
+.movie-score{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 30px;
+  border-radius: 10px;
+  margin-right: 10px;
+  color: #ffffff;
+  line-height: 30px;
+  background-color: #1296db;
+}
+.bottom{
+  text-align: center;
 }

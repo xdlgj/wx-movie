@@ -4,14 +4,14 @@
     "pages/cinema/cinema",
     "pages/me/me",
     "pages/testing/wxa/wxa",
-    "pages/testing/wxb/wxb",
-    "pages/logs/logs"
+    "pages/testing/wxb/wxb"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#1296db",
     "navigationBarTitleText": "林婧影院",
-    "navigationBarTextStyle":"white"
+    "navigationBarTextStyle":"white",
+    "onReachBottomDistance": 30
   },
   "tabBar":{
     "backgroundColor": "#ffffff",
@@ -37,6 +37,11 @@
         "selectedIconPath": "images/me-sel.png"
       }
     ]
+  },
+  "permission": {
+    "scope.userLocation":{
+      "desc": "获取位置用于搜索周边。"
+    }
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

@@ -1,23 +1,35 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <block wx:if="{{canIUseOpenData}}">
-      <view class="userinfo-avatar" bindtap="bindViewTap">
-        <open-data type="userAvatarUrl"></open-data>
-      </view>
-      <open-data type="userNickName"></open-data>
-    </block>
-    <block wx:elif="{{!hasUserInfo}}">
-      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
-      <button wx:elif="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-      <view wx:else> 请使用1.4.4及以上版本基础库 </view>
-    </block>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+<view class="top-nav">
+  <view class="city-entry">
+    <text>{{cityName}}</text>
+    <view class="triangle"></view>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <view class="switch-hot">
+    <text bindtap="tapTopNav" class="{{cid==1 ? 'text-selected' : ''}}" data-cid="1">热映</text>
+    <text bindtap="tapTopNav" class="{{cid==2 ? 'text-selected' : ''}}" data-cid="2">待映</text>
+    <text bindtap="tapTopNav" class="{{cid==3 ? 'text-selected' : ''}}" data-cid="3">经典</text>
   </view>
+ <view class="search-icon">
+ <image src="/images/search.png" mode="aspectFill"></image>
+ </view>
+</view>
+<view class="main-container">
+  <view class="movie-item" wx:for="{{movies}}" wx:for-item="movie" wx:key="index">
+    <view><image src="{{movie.cover}}"></image></view>
+    <view class="movie-info">
+    <view class="movie-top">
+      <text class="movie-title">{{movie.moviename}}</text>
+      <view class="movie-score">{{movie.score}}</view>
+    </view>
+    
+    <text>{{movie.movietype}}</text>
+    <text>主演：{{movie.actors}}</text>
+    </view>
+  </view>
+  <block wx:if="{{bottom}}">
+    <view class="bottom">
+      <text>我也是有底线的...</text>
+    </view>
+  </block>
+  
 </view>
