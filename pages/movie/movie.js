@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    movie: {}
+    movie: {},
+    isOpen: false,
   },
   /**获取电影详细内容 */
   loadMovie(id) {
@@ -20,7 +21,21 @@ Page({
       })
     });
   },
-
+  /**点击电影描述 */
+  tapDesc() {
+    this.setData({
+      isOpen: !this.data.isOpen
+    })
+  },
+  /**点击预览图片 */
+  tapPreImg(e) {
+    let index = e.target.dataset.index;
+    let urls = this.data.movie.thumb.map(item => item.split("@")[0])
+    wx.previewImage({
+      urls: urls,
+      current: urls[index],
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

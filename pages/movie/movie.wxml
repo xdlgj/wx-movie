@@ -24,8 +24,8 @@
 </view>
 <!-- 顶部区域结束 -->
 <!-- 简介区域开始 -->
-<view class="introduction">
-  <view class="line-clamp">
+<view class="introduction" bindtap="tapDesc">
+  <view class='{{isOpen ? "": "line-clamp"}}'>
     {{movie.description}} 
   </view>
   <view class="more">
@@ -37,43 +37,10 @@
 <view class="actors">
   <view class="title">演职人员</view>
   <scroll-view scroll-x="true" class="actors-list">
-    <view class="actors-item">
-      <image src="/images/729cac44fcaaf3e3a349f271426b284642434@160w_224h_1e_1c.jpg"></image>
-      <text>然然</text>
+    <view class="actors-item" wx:for="{{movie.actor}}" wx:for-item="actor" wx:key="avatar">
+      <image src="{{actor.avatar}}"></image>
+      <text>{{actor.name}}</text>
     </view>   
-    <view class="actors-item">
-      <image src="/images/729cac44fcaaf3e3a349f271426b284642434@160w_224h_1e_1c.jpg"></image>
-      <text>然然</text>
-    </view>   
-    <view class="actors-item">
-      <image src="/images/729cac44fcaaf3e3a349f271426b284642434@160w_224h_1e_1c.jpg"></image>
-      <text>然然</text>
-    </view>   
-    <view class="actors-item">
-      <image src="/images/729cac44fcaaf3e3a349f271426b284642434@160w_224h_1e_1c.jpg"></image>
-      <text>然然</text>
-    </view>   
-    <view class="actors-item">
-      <image src="/images/729cac44fcaaf3e3a349f271426b284642434@160w_224h_1e_1c.jpg"></image>
-      <text>然然</text>
-    </view>   
-    <view class="actors-item">
-      <image src="/images/729cac44fcaaf3e3a349f271426b284642434@160w_224h_1e_1c.jpg"></image>
-      <text>然然</text>
-    </view>   
-    <view class="actors-item">
-      <image src="/images/729cac44fcaaf3e3a349f271426b284642434@160w_224h_1e_1c.jpg"></image>
-      <text>然然</text>
-    </view>   
-    <view class="actors-item">
-      <image src="/images/729cac44fcaaf3e3a349f271426b284642434@160w_224h_1e_1c.jpg"></image>
-      <text>然然</text>
-    </view>   
-    <view class="actors-item">
-      <image src="/images/729cac44fcaaf3e3a349f271426b284642434@160w_224h_1e_1c.jpg"></image>
-      <text>然然</text>
-    </view>   
- 
   </scroll-view>
 </view>
 <!-- 演职人员结束 -->
@@ -81,14 +48,8 @@
 <view class="photos">
   <view class="title">视频和剧照</view>
   <scroll-view scroll-x="true" class="photos-list">
-     <view class="photos-item">
-        <image src="/images/28ff191ca08fe6bf689bf07cb4aaa48584424@420w_279h_1e_1c.jpg"></image>
-     </view>
-     <view class="photos-item">
-       <image src="/images/8e94cab5781a1b748f1e5df936fb93f259685@420w_279h_1e_1c.jpg"></image>
-     </view>
-     <view class="photos-item">
-        <image src="/images/4978405667fb814106da76da72fec568128212@420w_279h_1e_1c.jpg"></image>
+     <view class="photos-item" wx:for="{{movie.thumb}}" wx:key="*this">
+        <image src="{{item}}" mode="aspectFill" bindtap="tapPreImg" data-index="{{index}}"></image>
      </view>
   </scroll-view>
 </view>

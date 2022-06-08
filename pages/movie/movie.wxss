@@ -84,7 +84,6 @@ page{
   word-wrap: break-word;
   word-break: break-all;
   overflow: hidden;
-  line-height: 24px;
 }
 .introduction .more{
   text-align: center;
