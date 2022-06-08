@@ -65,16 +65,14 @@ text{
   color: #000000;
 }
 .movie-score{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50px;
+  text-align: center;
   height: 30px;
   border-radius: 10px;
   margin-right: 10px;
   color: #ffffff;
   line-height: 30px;
   background-color: #1296db;
+  padding: 0 10px;
 }
 .bottom{
   text-align: center;
