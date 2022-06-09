@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <view class="top-nav">
-  <view class="city-entry">
+  <view class="city-entry" bindtap="tapCity">
     <text>{{cityName}}</text>
     <view class="triangle"></view>
   </view>

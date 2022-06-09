@@ -1,2 +1,10 @@
 <!--pages/wxa/wxa.wxml-->
 <button type="primary" bindtap="tapToB">选择城市：{{city}}</button>
+
+<!--target表示触发事件的组件，currentTarget表示当前的组件 一般用在事件冒泡中表示最上层的组件-->
+<view id="outer" bindtap="handleTap1" data-outer="outer">
+  outer view
+  <view id="inner" bindtap="handleTap2" data-inner="inner">
+    inner view
+  </view>
+</view>

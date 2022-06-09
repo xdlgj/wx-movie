@@ -86,11 +86,21 @@ page{
   overflow: hidden;
 }
 .introduction .more{
-  text-align: center;
+  display: flex;
+  justify-content: center;
 }
-.introduction .more image{
-  width:10px;
-  height:10px;
+.ico-up{
+  width:0;
+  height:0;
+  border: 4px solid transparent;
+  border-bottom-color: #bfbfbf;
+}
+.ico-down{
+  width:0;
+  height:0;
+  margin-top: 4px;
+  border: 4px solid transparent;
+  border-top-color: #bfbfbf;
 }
 .actors{
   margin-top:10px;

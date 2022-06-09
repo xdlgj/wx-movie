@@ -29,7 +29,7 @@
     {{movie.description}} 
   </view>
   <view class="more">
-    <image src="/images/{{isOpen ? 'arrow_up.png' : 'arrow_down.png'}}"></image>
+  <view class="{{isOpen ? 'ico-up': 'ico-down'}}"></view>
   </view>
 </view>
 <!-- 简介区域结束 -->

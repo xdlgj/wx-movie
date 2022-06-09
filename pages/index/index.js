@@ -15,9 +15,16 @@ Page({
       success: (res) => {
         const cityName = res.result.address_component.city;
         this.setData({cityName});
+        getApp().globalData.cityName = cityName;
         wx.setStorage({key: "cityName", data: cityName});
       },
     });
+  },
+  /**点击城市 */
+  tapCity() {
+    wx.navigateTo({
+      url: '/pages/city/city',
+    })
   },
   /**点击电影分类 */
   tapTopNav(e) {
@@ -90,7 +97,6 @@ Page({
       return;
     }
     this.data.pageno++;
-    console.log(this.data.pageno)
     let offset = (this.data.pageno - 1 ) * 20;
     let movies = await this.loadMovies(this.data.cid, offset);
     let newMovices = this.data.movies.concat(movies);
@@ -123,5 +129,7 @@ Page({
       this.setData({movies});
     })
   },
-  
+  onShow() {
+    this.setData({cityName: getApp().globalData.cityName})
+  }
 })

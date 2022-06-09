@@ -18,6 +18,13 @@ Page({
     })
   },
 
+  handleTap1(e) {
+    console.log("handleTap1", e)
+  },
+  handleTap2(e) {
+    console.log("handleTap2", e)
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
